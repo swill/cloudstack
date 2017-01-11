@@ -6587,8 +6587,8 @@
                                         success: function(json) {
                                             var item = json.listvpncustomergatewaysresponse.vpncustomergateway[0];
 
-                                            //IKE POlicy
-                                            var a1 = item.ikepolicy.split('-'); //e.g. item.ikepolicy == '3des-md5' or '3des-md5;modp1024'
+                                            //IKE Policy
+                                            var a1 = item.ikepolicy.split('-'); //e.g. item.ikepolicy == '3des-md5;modp1024'
                                             item.ikeEncryption = a1[0];
                                             if (a1[1].indexOf(';') == -1) {
                                                 item.ikeHash = a1[1];
